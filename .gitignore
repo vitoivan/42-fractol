@@ -1,0 +1,4 @@
+*.o
+.vscode
+.prettier*
+README.md
