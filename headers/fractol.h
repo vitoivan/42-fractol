@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 08:52:17 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 10:27:46 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:20:20 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@
 enum			e_keycodes
 {
 	ESC = 65307,
-	PLUS = 61,
-	MINUS = 45,
 	W = 119,
 	A = 97,
 	S = 115,
@@ -54,31 +52,6 @@ enum			e_events
 	KEYPRESS_MASK = (1L << 0),
 	BUTTONPRESS_MASK = (1L << 2),
 };
-
-// https://getbootstrap.com/docs/4.0/utilities/colors/
-typedef enum e_colors
-{
-	BLUE = 0X2196F3,
-	INDIGO = 0X6610F2,
-	PURPLE = 0X6F42C1,
-	PINK = 0XE83E8C,
-	RED = 0XDC3545,
-	ORANGE = 0XFD7E14,
-	YELLOW = 0XFFC107,
-	GREEN = 0X28A745,
-	TEAL = 0X20C997,
-	CYAN = 0X17A2B8,
-	WHITE = 0XFFFFFF,
-	GRAY = 0X6C757D,
-	PRIMARY = 0X007BFF,
-	SECONDARY = 0X6C757D,
-	SUCCESS = 0X28A745,
-	INFO = 0X17A2B8,
-	WARNING = 0XFFC107,
-	DANGER = 0XDC3545,
-	LIGHT = 0XF8F9FA,
-	DARK = 0X343A40,
-}				t_colors;
 
 typedef struct s_complex
 {
@@ -150,7 +123,7 @@ int				move(t_ctx *ctx, long double x, long double y,
 void			draw(t_ctx *ctx, void (*fn)(t_ctx *, int, int));
 int				register_hooks(t_ctx *ctx);
 char			*get_pixel_addr(t_img *img, int x, int y);
-void			put_pixel_to_img(t_img *img, int x, int y, t_colors color);
+void			put_pixel_to_img(t_img *img, int x, int y, int color);
 
 // Viewports
 void			set_mandelbrot_viewport(t_view *v);
