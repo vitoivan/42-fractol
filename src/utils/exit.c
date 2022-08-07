@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 09:11:18 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 09:11:22 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:37:59 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	free_if_exist(void *ptr)
 {
-	if (ptr)
+	if (ptr && ptr != NULL)
 		free(ptr);
 }
 

@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_mandelbrot.c                                  :+:      :+:    :+:   */
+/*   ctx_default.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 09:06:30 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 11:32:16 by vivan-de         ###   ########.fr       */
+/*   Created: 2022/08/07 11:34:13 by vivan-de          #+#    #+#             */
+/*   Updated: 2022/08/07 11:44:05 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../headers/fractol.h"
 
-void	init_mandelbrot(t_ctx *ctx, int argc, char **argv)
+void	ctx_defaults(t_ctx *ctx)
 {
-	int	theme_nbr;
-
-	if (argc == 3)
-	{
-		theme_nbr = check_valid_theme(argv[2]);
-		if (theme_nbr)
-			ctx->theme = theme_nbr;
-		else
-			print_help(ctx);
-	}
-	set_mandelbrot_viewport(ctx->view);
-	ctx->fn = mandelbrot;
+	ctx->fn = NULL;
+	ctx->img = NULL;
+	ctx->img = NULL;
+	ctx->view = NULL;
+	ctx->mlx = NULL;
+	ctx->theme = 1;
+	ctx->window = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 09:13:05 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 09:13:07 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:36:22 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ int	main(int argc, char **argv)
 {
 	t_ctx	ctx;
 
+	ctx_defaults(&ctx);
 	if (argc < 2)
-		print_help();
-	check_fractal_name(argv[1]);
+		print_help(&ctx);
+	check_fractal_name(&ctx, argv[1]);
 	ctx_init(&ctx);
 	assign_fractal(&ctx, argc, argv);
 	colors_init(&ctx);

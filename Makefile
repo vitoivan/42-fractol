@@ -22,6 +22,7 @@ TARGETS = 	main.c \
 			utils/zoom.c \
 			utils/check_fractal_name.c \
 			utils/get_coordinate.c \
+			utils/ctx_default.c \
 			utils/move.c \
 			utils/print_help.c \
 			utils/exit.c \

@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 08:52:17 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 11:24:03 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:44:36 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,14 +104,15 @@ void			colors_init(t_ctx *ctx);
 void			init_mandelbrot(t_ctx *ctx, int argc, char **argv);
 
 // Utils
+void			ctx_defaults(t_ctx *ctx);
 int				exit_program(t_ctx *ctx);
 t_complex		get_coordinate(int x, int y, t_ctx *ctx);
 int				get_colors(int i, t_ctx *ctx);
 void			zoom(t_ctx *ctx, int mouse_x, int mouse_y, void (*fn)(t_ctx *,
 						int, int), int z);
-void			print_help(void);
+void			print_help(t_ctx *ctx);
 void			assign_fractal(t_ctx *ctx, int argc, char **argv);
-void			check_fractal_name(char *name);
+void			check_fractal_name(t_ctx *ctx, char *name);
 int				check_valid_theme(char *str);
 int				move(t_ctx *ctx, long double x, long double y,
 					void (*fn)(t_ctx *, int, int));
