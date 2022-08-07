@@ -1,5 +1,6 @@
 *.o
 *.a
 .vscode
+fractol
 .prettier*
 README.md

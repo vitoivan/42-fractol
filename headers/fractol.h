@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 08:52:17 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 11:20:20 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 11:24:03 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,7 @@ enum			e_keycodes
 
 enum			e_events
 {
-	KEYDOWN = 2,
-	KEYUP = 3,
 	DESTROY = 17,
-	KEYPRESS_MASK = (1L << 0),
 	BUTTONPRESS_MASK = (1L << 2),
 };
 
