@@ -68,7 +68,7 @@ $(OBJ_DIR):
 
 dclean: fclean
 	make -C libmlx_linux clean
-	make -C libft clean
+	make -C libft fclean
 
 clean: 
 	rm -f $(OBJ)
