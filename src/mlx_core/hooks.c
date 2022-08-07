@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 09:00:11 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 09:00:19 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/07 15:10:58 by vivan-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,17 @@ static int	keyboard_hooks(int key, t_ctx *ctx)
 	return (0);
 }
 
+static int loop_hook(t_ctx *ctx)
+{
+	draw(ctx, ctx->fn);
+	return (0);
+}
+
 int	register_hooks(t_ctx *ctx)
 {
 	mlx_key_hook(ctx->window, keyboard_hooks, ctx);
 	mlx_mouse_hook(ctx->window, mouse_hooks, ctx);
+	mlx_loop_hook(ctx->mlx, loop_hook, ctx);
 	mlx_hook(ctx->window, DESTROY, BUTTONPRESS_MASK, exit_program, ctx);
 	return (0);
 }
