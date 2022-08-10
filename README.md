@@ -12,9 +12,9 @@
 ### Requirements
 
 - Linux OS
-- The libs `xorg`, `x11` and `zlib`
+- The libs `xorg`, `x11`, `zlib` and `make` 
 ```bash
-sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev make
 ```
 
 
