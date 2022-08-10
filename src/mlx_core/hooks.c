@@ -6,7 +6,7 @@
 /*   By: vivan-de <vivan-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 09:00:11 by vivan-de          #+#    #+#             */
-/*   Updated: 2022/08/07 15:10:58 by vivan-de         ###   ########.fr       */
+/*   Updated: 2022/08/08 21:07:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static int	keyboard_hooks(int key, t_ctx *ctx)
 	return (0);
 }
 
-static int loop_hook(t_ctx *ctx)
+static int	loop_hook(t_ctx *ctx)
 {
 	draw(ctx, ctx->fn);
 	return (0);
